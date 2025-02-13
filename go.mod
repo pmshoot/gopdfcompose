@@ -1,4 +1,4 @@
-module gitlab.rebrainme.com/golang_users_repos/6787/pdfcompose
+module github.com/pmshoot/gopdfcompose
 
 go 1.23.5
 
