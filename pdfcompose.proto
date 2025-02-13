@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package pdfcompose;
+
+option go_package="./;pdfcompose";
+
+
+service PdfCompose {
+    rpc ComposeFromFiles(ComposeFromFilesRequest) returns (ComposeFromFilesResponse) {}
+}
+
+message FileCompose {
+    bytes file = 1;
+}
+
+message ComposeFromFilesRequest {
+    repeated FileCompose files = 1;
+}
+
+message ComposeFromFilesResponse {
+    optional FileCompose outfile = 1;
+    bool success = 2;
+    optional string error = 3;
+}
