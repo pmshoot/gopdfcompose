@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package pdfcompose;
 
-option go_package="./;pdfcompose";
+option go_package=".;pdfcompose";
 
 
 service PdfCompose {
