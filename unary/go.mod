@@ -1,6 +1,6 @@
-module github.com/pmshoot/gopdfcompose/unary/proto
+module github.com/pmshoot/gopdfcompose/unary/pdfcompose
 
-go 1.23.5
+go 1.22.10
 
 require (
 	google.golang.org/grpc v1.70.0

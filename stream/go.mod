@@ -1,4 +1,4 @@
-module github.com/pmshoot/gopdfcompose/stream/proto
+module github.com/pmshoot/gopdfcompose/stream/pdfcompose
 
 go 1.22.10
 
