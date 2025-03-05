@@ -1,4 +1,4 @@
-module github.com/pmshoot/gopdfcompose/unary/pdfcompose
+module github.com/pmshoot/gopdfcompose/unary
 
 go 1.22.10
 

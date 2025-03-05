@@ -1,4 +1,4 @@
-module github.com/pmshoot/gopdfcompose/stream/pdfcompose
+module github.com/pmshoot/gopdfcompose/stream
 
 go 1.22.10
 
