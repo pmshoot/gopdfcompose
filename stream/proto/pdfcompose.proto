@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pdfcompose;
+
+option go_package="./;pdfcompose";
+
+
+service PdfCompose {
+    rpc UploadFile(stream Chunk) returns (stream Chunk) {}
+}
+
+message Chunk {
+    bytes Content = 1;
+}

@@ -1,4 +1,4 @@
-module github.com/pmshoot/gopdfcompose
+module github.com/pmshoot/gopdfcompose/unary/proto
 
 go 1.23.5
 
