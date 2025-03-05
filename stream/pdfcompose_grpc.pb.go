@@ -125,5 +125,5 @@ var _PdfCompose_serviceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "pdfcompose.proto",
+	Metadata: "stream/pdfcompose.proto",
 }

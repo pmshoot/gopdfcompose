@@ -93,5 +93,5 @@ var _PdfCompose_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "pdfcompose.proto",
+	Metadata: "unary/pdfcompose.proto",
 }

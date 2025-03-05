@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.32.0
 // 	protoc        v3.21.12
-// source: pdfcompose.proto
+// source: stream/pdfcompose.proto
 
 package pdfcompose
 
@@ -31,7 +31,7 @@ type Chunk struct {
 func (x *Chunk) Reset() {
 	*x = Chunk{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pdfcompose_proto_msgTypes[0]
+		mi := &file_stream_pdfcompose_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -44,7 +44,7 @@ func (x *Chunk) String() string {
 func (*Chunk) ProtoMessage() {}
 
 func (x *Chunk) ProtoReflect() protoreflect.Message {
-	mi := &file_pdfcompose_proto_msgTypes[0]
+	mi := &file_stream_pdfcompose_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -57,7 +57,7 @@ func (x *Chunk) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Chunk.ProtoReflect.Descriptor instead.
 func (*Chunk) Descriptor() ([]byte, []int) {
-	return file_pdfcompose_proto_rawDescGZIP(), []int{0}
+	return file_stream_pdfcompose_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Chunk) GetContent() []byte {
@@ -67,39 +67,39 @@ func (x *Chunk) GetContent() []byte {
 	return nil
 }
 
-var File_pdfcompose_proto protoreflect.FileDescriptor
+var File_stream_pdfcompose_proto protoreflect.FileDescriptor
 
-var file_pdfcompose_proto_rawDesc = []byte{
-	0x0a, 0x10, 0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x65, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x12, 0x0a, 0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x65, 0x22, 0x21,
-	0x0a, 0x05, 0x43, 0x68, 0x75, 0x6e, 0x6b, 0x12, 0x18, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x74, 0x65,
-	0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x07, 0x43, 0x6f, 0x6e, 0x74, 0x65, 0x6e,
-	0x74, 0x32, 0x46, 0x0a, 0x0a, 0x50, 0x64, 0x66, 0x43, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x65, 0x12,
-	0x38, 0x0a, 0x0a, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x46, 0x69, 0x6c, 0x65, 0x12, 0x11, 0x2e,
-	0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x65, 0x2e, 0x43, 0x68, 0x75, 0x6e, 0x6b,
-	0x1a, 0x11, 0x2e, 0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x65, 0x2e, 0x43, 0x68,
-	0x75, 0x6e, 0x6b, 0x22, 0x00, 0x28, 0x01, 0x30, 0x01, 0x42, 0x0f, 0x5a, 0x0d, 0x2e, 0x2f, 0x3b,
-	0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+var file_stream_pdfcompose_proto_rawDesc = []byte{
+	0x0a, 0x17, 0x73, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x2f, 0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d, 0x70,
+	0x6f, 0x73, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0a, 0x70, 0x64, 0x66, 0x63, 0x6f,
+	0x6d, 0x70, 0x6f, 0x73, 0x65, 0x22, 0x21, 0x0a, 0x05, 0x43, 0x68, 0x75, 0x6e, 0x6b, 0x12, 0x18,
+	0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52,
+	0x07, 0x43, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x32, 0x46, 0x0a, 0x0a, 0x50, 0x64, 0x66, 0x43,
+	0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x65, 0x12, 0x38, 0x0a, 0x0a, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64,
+	0x46, 0x69, 0x6c, 0x65, 0x12, 0x11, 0x2e, 0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73,
+	0x65, 0x2e, 0x43, 0x68, 0x75, 0x6e, 0x6b, 0x1a, 0x11, 0x2e, 0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d,
+	0x70, 0x6f, 0x73, 0x65, 0x2e, 0x43, 0x68, 0x75, 0x6e, 0x6b, 0x22, 0x00, 0x28, 0x01, 0x30, 0x01,
+	0x42, 0x0f, 0x5a, 0x0d, 0x2e, 0x2f, 0x3b, 0x70, 0x64, 0x66, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73,
+	0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_pdfcompose_proto_rawDescOnce sync.Once
-	file_pdfcompose_proto_rawDescData = file_pdfcompose_proto_rawDesc
+	file_stream_pdfcompose_proto_rawDescOnce sync.Once
+	file_stream_pdfcompose_proto_rawDescData = file_stream_pdfcompose_proto_rawDesc
 )
 
-func file_pdfcompose_proto_rawDescGZIP() []byte {
-	file_pdfcompose_proto_rawDescOnce.Do(func() {
-		file_pdfcompose_proto_rawDescData = protoimpl.X.CompressGZIP(file_pdfcompose_proto_rawDescData)
+func file_stream_pdfcompose_proto_rawDescGZIP() []byte {
+	file_stream_pdfcompose_proto_rawDescOnce.Do(func() {
+		file_stream_pdfcompose_proto_rawDescData = protoimpl.X.CompressGZIP(file_stream_pdfcompose_proto_rawDescData)
 	})
-	return file_pdfcompose_proto_rawDescData
+	return file_stream_pdfcompose_proto_rawDescData
 }
 
-var file_pdfcompose_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_pdfcompose_proto_goTypes = []interface{}{
+var file_stream_pdfcompose_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_stream_pdfcompose_proto_goTypes = []interface{}{
 	(*Chunk)(nil), // 0: pdfcompose.Chunk
 }
-var file_pdfcompose_proto_depIdxs = []int32{
+var file_stream_pdfcompose_proto_depIdxs = []int32{
 	0, // 0: pdfcompose.PdfCompose.UploadFile:input_type -> pdfcompose.Chunk
 	0, // 1: pdfcompose.PdfCompose.UploadFile:output_type -> pdfcompose.Chunk
 	1, // [1:2] is the sub-list for method output_type
@@ -109,13 +109,13 @@ var file_pdfcompose_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_pdfcompose_proto_init() }
-func file_pdfcompose_proto_init() {
-	if File_pdfcompose_proto != nil {
+func init() { file_stream_pdfcompose_proto_init() }
+func file_stream_pdfcompose_proto_init() {
+	if File_stream_pdfcompose_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_pdfcompose_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_stream_pdfcompose_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Chunk); i {
 			case 0:
 				return &v.state
@@ -132,18 +132,18 @@ func file_pdfcompose_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_pdfcompose_proto_rawDesc,
+			RawDescriptor: file_stream_pdfcompose_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_pdfcompose_proto_goTypes,
-		DependencyIndexes: file_pdfcompose_proto_depIdxs,
-		MessageInfos:      file_pdfcompose_proto_msgTypes,
+		GoTypes:           file_stream_pdfcompose_proto_goTypes,
+		DependencyIndexes: file_stream_pdfcompose_proto_depIdxs,
+		MessageInfos:      file_stream_pdfcompose_proto_msgTypes,
 	}.Build()
-	File_pdfcompose_proto = out.File
-	file_pdfcompose_proto_rawDesc = nil
-	file_pdfcompose_proto_goTypes = nil
-	file_pdfcompose_proto_depIdxs = nil
+	File_stream_pdfcompose_proto = out.File
+	file_stream_pdfcompose_proto_rawDesc = nil
+	file_stream_pdfcompose_proto_goTypes = nil
+	file_stream_pdfcompose_proto_depIdxs = nil
 }
