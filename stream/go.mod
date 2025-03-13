@@ -1,4 +1,4 @@
-module sourcecraft.dev/pmike/gopdfcompose/stream
+module github.com/pmshoot/gopdfcompose/stream
 
 go 1.22.10
 
