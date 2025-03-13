@@ -1,4 +1,4 @@
-module ssh.sourcecraft.dev/pmike/gopdfcompose/stream
+module sourcecraft.dev/pmike/gopdfcompose/stream
 
 go 1.22.10
 
