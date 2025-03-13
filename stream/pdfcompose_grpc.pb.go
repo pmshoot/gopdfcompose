@@ -39,7 +39,7 @@ func (c *pdfComposeClient) UploadFile(ctx context.Context, opts ...grpc.CallOpti
 
 type PdfCompose_UploadFileClient interface {
 	Send(*Chunk) error
-	Recv() (*Chunk, error)
+	CloseAndRecv() (*UploadFileResponse, error)
 	grpc.ClientStream
 }
 
@@ -51,8 +51,11 @@ func (x *pdfComposeUploadFileClient) Send(m *Chunk) error {
 	return x.ClientStream.SendMsg(m)
 }
 
-func (x *pdfComposeUploadFileClient) Recv() (*Chunk, error) {
-	m := new(Chunk)
+func (x *pdfComposeUploadFileClient) CloseAndRecv() (*UploadFileResponse, error) {
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	m := new(UploadFileResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -92,7 +95,7 @@ func _PdfCompose_UploadFile_Handler(srv interface{}, stream grpc.ServerStream) e
 }
 
 type PdfCompose_UploadFileServer interface {
-	Send(*Chunk) error
+	SendAndClose(*UploadFileResponse) error
 	Recv() (*Chunk, error)
 	grpc.ServerStream
 }
@@ -101,7 +104,7 @@ type pdfComposeUploadFileServer struct {
 	grpc.ServerStream
 }
 
-func (x *pdfComposeUploadFileServer) Send(m *Chunk) error {
+func (x *pdfComposeUploadFileServer) SendAndClose(m *UploadFileResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
@@ -121,7 +124,6 @@ var _PdfCompose_serviceDesc = grpc.ServiceDesc{
 		{
 			StreamName:    "UploadFile",
 			Handler:       _PdfCompose_UploadFile_Handler,
-			ServerStreams: true,
 			ClientStreams: true,
 		},
 	},

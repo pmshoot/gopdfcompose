@@ -6,9 +6,15 @@ option go_package=".;pdfcompose";
 
 
 service PdfCompose {
-    rpc UploadFile(stream Chunk) returns (stream Chunk) {}
+    rpc UploadFile(stream Chunk) returns (UploadFileResponse) {}
 }
 
 message Chunk {
     bytes Content = 1;
 }
+
+message UploadFileResponse {
+    bool success = 1;
+    optional string error = 2;
+    optional bytes file = 3;
+    }

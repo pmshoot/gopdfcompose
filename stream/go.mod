@@ -1,6 +1,6 @@
-module github.com/pmshoot/gopdfcompose/stream
+module sourcecraft.dev/pmike/gopdfcompose/stream
 
-go 1.22
+go 1.22.10
 
 require (
 	google.golang.org/grpc v1.71.0
